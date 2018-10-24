@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>TinyKeys</title>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <textarea id="textarea"></textarea>
+
+    <div class="input-container">
+        <input type="range" list="steplist" min="0" max="6" value="0" class="slider" id="slider">
+
+        <span id="t0">A B C D</span>
+        <span id="t1">E F G H</span>
+        <span id="t2">I J K L</span>
+        <span id="t3">M N O P</span>
+        <span id="t4">Q R S T</span>
+        <span id="t5">U V W X</span>
+        <span id="t6">Y Z ≪ ·</span>
+
+        <button id="b0" readonly ontouchstart="change_char(this.id)" style="color:white;">⇧</button>
+        <button id="b1" readonly ontouchstart="insert_char(this.id)">a</button>
+        <button id="b2" readonly ontouchstart="insert_char(this.id)">b</button>
+        <button id="b3" readonly ontouchstart="insert_char(this.id)">c</button>
+        <button id="b4" readonly ontouchstart="insert_char(this.id)">d</button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
