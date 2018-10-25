@@ -1,11 +1,13 @@
+// initialize variables
 const orange = "#fbc02d";
-
 document.getElementById("t0").style.color = orange;
 document.getElementById("t0").style.textDecoration = "underline";
 
+// define actions of moving the slider
 let slider = document.getElementById("slider");
 slider.oninput = function () {
     const chars = ["ABCD", "EFGH", "IJKL", "MNOP", "QRST", "UVWX", "YZ≪⎵"];
+    // change the letter on the buttons
     let i = this.value;
     if (document.getElementById("b0").style.color === "white") {
         document.getElementById("b1").innerHTML = chars[i][0].toLowerCase();
@@ -21,6 +23,7 @@ slider.oninput = function () {
             document.getElementById("b3").innerHTML = "↵";
         }
     }
+    // highlight the labels of slider
     for(let j = 0; j <= 6; j++){
         if (j == i) {
             document.getElementById("t"+j.toString()).style.color = orange;
@@ -32,6 +35,7 @@ slider.oninput = function () {
     }
 }
 
+// function for changing change between upper and lower case
 function change_char(id) {
     let cap = document.getElementById(id);
     if (cap.style.color === "white") {
@@ -55,6 +59,7 @@ function change_char(id) {
     }
 }
 
+// function for typing (adding) a character to the buffer
 function insert_char(id) {
     let char = document.getElementById(id).innerHTML;
     if (char === "≪") {

@@ -11,12 +11,16 @@
 </head>
 
 <body>
-
+    <!-- text area -->
     <textarea id="textarea"></textarea>
 
+    <!-- input method container  -->
     <div class="input-container">
+
+        <!-- slider -->
         <input type="range" list="steplist" min="0" max="6" value="0" class="slider" id="slider">
 
+        <!-- tickmarks -->
         <span id="t0">A B C D</span>
         <span id="t1">E F G H</span>
         <span id="t2">I J K L</span>
@@ -25,6 +29,7 @@
         <span id="t5">U V W X</span>
         <span id="t6">Y Z ≪ ·</span>
 
+        <!-- buttons -->
         <button id="b0" readonly ontouchstart="change_char(this.id)" style="color:white;">⇧</button>
         <button id="b1" readonly ontouchstart="insert_char(this.id)">a</button>
         <button id="b2" readonly ontouchstart="insert_char(this.id)">b</button>
